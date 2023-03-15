@@ -4,8 +4,7 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
-  workflow_dispatch:
-  
+
 jobs:
   check-bat-version:
     runs-on: ubuntu-latest
@@ -22,5 +21,10 @@ jobs:
           DEFAULT_BRANCH: "main"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
-  call-workflow1:
-    uses: ./.github/workflows/deploy.yml
+      - name: Setup Python
+        uses: actions/setup-python@v4 
+        with:
+          python-version: 'pypy3.9' 
+          
+      - name: Run Python
+        run: python test.py
