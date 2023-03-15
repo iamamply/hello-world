@@ -1,3 +1,5 @@
 <?php
-  phpinfo();
+  function x(){
+    return "x";
+  }
 ?>
