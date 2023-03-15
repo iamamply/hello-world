@@ -1,3 +1,4 @@
 <?php
-  phpinfc_x
+  a = 10;
+  echo $a;
 ?>
