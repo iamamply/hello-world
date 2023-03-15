@@ -1,5 +1,6 @@
 name: Deploy
-on: [push, pull_request]
+on:
+  workflow_call:
 jobs:
   my-deploy:
     runs-on: ubuntu-latest
