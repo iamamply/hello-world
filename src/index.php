@@ -1,3 +1,3 @@
 <?php
-  phpinfo;
+  phpinfc_x
 ?>
