@@ -1,0 +1,13 @@
+name: Deploy
+on: [push, pull_request]
+jobs:
+  my-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Python
+        uses: actions/setup-python@v4 
+        with:
+          python-version: 'pypy3.9' 
+      
+      - name: Run Python
+        run: python test.py
